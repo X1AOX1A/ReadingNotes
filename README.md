@@ -1,2 +1,2 @@
-# Paper Reading Notes
+# Reading Notes
 

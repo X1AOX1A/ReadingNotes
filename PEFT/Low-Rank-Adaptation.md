@@ -3,6 +3,10 @@
 
 ## Papers
 
+- CTRLorALTer: Conditional LoRAdapter for Efficient 0-Shot Control & Altering of T2I Models
+    - 2024.05.13, arXiv, [pdf](https://arxiv.org/abs/2405.07913), [code](https://github.com/CompVis/LoRAdapter), [home](https://compvis.github.io/LoRAdapter/)
+    - Method: 对 LoRA_A 进行 conditional transformation, 控制 stabe diffusion structure&style
+
 - FourierFT: Parameter-Efficient Fine-Tuning with Discrete Fourier Transform
     - 2024.05.05, ICML2024, [pdf](https://arxiv.org/abs/2405.03003), [code](https://github.com/Chaos96/fourierft)
     - <details>

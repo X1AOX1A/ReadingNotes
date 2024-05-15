@@ -72,15 +72,28 @@
   - 2024.01.08, arXiv, [pdf](https://arxiv.org/abs/2401.04044)
   - Findings: 把FFN分解成两个FFN来降低运算量
 
+
+## Activate Layer / Sensitive Neurons
+
+- Let's Focus on Neuron: Neuron-Level Supervised Fine-tuning for Large Language Model
+  - 2024.03.18, arXiv, [pdf](https://arxiv.org/abs/2403.11621)
+  - Method: 在 FT 模型上的 Sensitive Neurons 进行  Neuron-Level Fine-Tuning (NeFT)
+
+- Layer Skip: Enabling Early Exit Inference and Self-Speculative Decoding
+  - 2024.03.25, arXiv, [pdf](https://arxiv.org/abs/2404.16710)
+  - Method：层dropout的dropout率随层数增加而增加 (LLaMA1-7B)，使用指数增长函数来设置每个层的dropout率
+  - 重要性度量：generated token corresponds to the earliest layer in the model that predicted it
+
+- Neurons in Large Language Models: Dead, N-gram, Positional
+  - 2023.09.09, arXiv, [pdf](https://arxiv.org/abs/2309.04827)
+  - Findings: 70% are never activated in the first half of OPT-60B
+
+
 ## Others
 
 - Adapprox: Adaptive Approximation in Adam Optimization via Randomized Low-Rank Matrices
   - 2024.03.22, arXiv, [pdf](https://arxiv.org/abs/2403.14958)
   - Method: 采用随机低秩(自适应秩)矩阵近似来更有效和准确地近似Adam的二阶矩
-
-- Let's Focus on Neuron: Neuron-Level Supervised Fine-tuning for Large Language Model
-  - 2024.03.18, arXiv, [pdf](https://arxiv.org/abs/2403.11621)
-  - Method: 在 FT 模型上的 Sensitive Neurons 进行  Neuron-Level Fine-Tuning (NeFT)
 
 - ResLoRA: Identity Residual Mapping in Low-Rank Adaption
   - 2024.02.28, arXiv, [pdf](https://arxiv.org/abs/2402.18039)

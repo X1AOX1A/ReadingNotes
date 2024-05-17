@@ -91,6 +91,10 @@
 
 ## Others
 
+- LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report
+  - 2024.04.29, arXiv, [pdf](https://arxiv.org/abs/2405.00732), [code](https://github.com/predibase/lora_bakeoff?tab=readme-ov-file)
+  - TL;DR: 25 fine-tuned Mistral-7b models that consistently outperform base models by 70% and GPT-4 by 4-15%
+
 - Adapprox: Adaptive Approximation in Adam Optimization via Randomized Low-Rank Matrices
   - 2024.03.22, arXiv, [pdf](https://arxiv.org/abs/2403.14958)
   - Method: 采用随机低秩(自适应秩)矩阵近似来更有效和准确地近似Adam的二阶矩

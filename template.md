@@ -7,6 +7,6 @@
   - Method: intro to the method
   - Results: results of the method
   - <details>
-        <summary>Method: intro to the method with image</summary>
-        <img src="" align="middle" />
-        </details>
+      <summary>Method: intro to the method with image</summary>
+      <img src="" align="middle" />
+    </details>

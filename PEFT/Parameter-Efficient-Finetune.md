@@ -9,4 +9,6 @@
 - Parameter-Efficient Fine-Tuning Methods for Pretrained Language Models: A Critical Review and Assessment
   -  2023.12.19, arXiv, [pdf](https://arxiv.org/abs/2312.12148)
 
+- [Awesome Adapter Resources](https://calpt.github.io/awesome-adapter-resources/)
+
 ## Papers

@@ -1,7 +1,7 @@
 
 # Low-Rank Adaptation (LoRA)
 
-## Adaptive / Sparse LoRA
+## Adaptive LoRA
 
 - LISA: Layerwise Importance Sampling for Memory-Efficient Large Language Model Fine-Tuning
   - 2024.03.26, arXiv, [pdf](https://arxiv.org/abs/2403.17919)
@@ -20,9 +20,6 @@
   - 2024.03.14, arXiv, [pdf](https://arxiv.org/abs/2403.09113), [code](https://github.com/ruz048/AutoLoRA)
   - Method: 使用迭代训练的方法，在 train set 上训练 loraA, loraB，在 val set 上训练 selection variables (summation=1)，迭代直到收敛；再通过 threshold 过滤 selection variables 进行 prune，获得每个 layer 的 optimal rank
 
-- SoRA: Sparse Low-rank Adaptation of Pre-trained Language Models
-  - 2023.11.20, arXiv, [pdf](https://arxiv.org/abs/2311.11696)
-
 - InRank: Incremental Low-Rank Learning
   - 2023.06.20, arXiv, [pdf](https://arxiv.org/abs/2306.11250)
 
@@ -31,23 +28,7 @@
   - Method: 基于梯度计算 rank 的 sensitivity&uncertainty score，动态分配 / mask SVD 对角矩阵；使用损失函数正则化逼近 SVD 分解
   - Results：DeBERTaV3-base (NLU); BART-large (NLG) 上超越 LoRA；FC2 以及更高层占据更多 rank
 
-## SVD LoRA
-
-- PiSSA: Principal Singular Values and Singular Vectors Adaptation of Large Language Models
-  - 2024.04.03, arXiv, [pdf](https://arxiv.org/abs/2404.02948)
-  - Method: SVD init LoRA, large singular part freeze, small singular part update
-
-- SVD-LLM: Truncation-aware Singular Value Decomposition for Large Language Model Compression
-  - 2024.03.12, arXiv, [pdf](https://arxiv.org/abs/2403.07378)
-
-- ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models
-  - 2023.12.10, arXiv, [pdf](https://arxiv.org/abs/2312.05821)
-
-## Weight Decomposed / Projection
-
-- CTRLorALTer: Conditional LoRAdapter for Efficient 0-Shot Control & Altering of T2I Models
-  - 2024.05.13, arXiv, [pdf](https://arxiv.org/abs/2405.07913), [code](https://github.com/CompVis/LoRAdapter), [home](https://compvis.github.io/LoRAdapter/)
-  - Method: 对 LoRA_A 进行 conditional transformation, 控制 stabe diffusion structure&style
+## Sparse LoRA
 
 - FourierFT: Parameter-Efficient Fine-Tuning with Discrete Fourier Transform
   - 2024.05.05, ICML2024, [pdf](https://arxiv.org/abs/2405.03003), [code](https://github.com/Chaos96/fourierft)
@@ -57,13 +38,46 @@
         </details>
   - Results：RoBERTa, GPT-2, LLaMA1,2, 7B, 13B 相同 performance 条件下，大幅降低训练参数
 
+- PRoLoRA: Partial Rotation Empowers More Parameter-Efficient LoRA
+  - 2024.02.24, arXiv, [pdf](https://arxiv.org/abs/2402.16902)
+  - <details>
+      <summary>Method: 对 lora A,B 参数进行部分旋转广播共享，保留部分非共享 rank</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202405240040215.png"/>
+    </details>
+
+- SoRA: Sparse Low-rank Adaptation of Pre-trained Language Models
+  - 2023.11.20, arXiv, [pdf](https://arxiv.org/abs/2311.11696)
+
+- VeRA: Vector-based Random Matrix Adaptation
+  - 2023.10.17, ICLR24, [pdf](https://arxiv.org/abs/2310.11454v1)
+  - <details>
+      <summary>Method: 固定共享随机矩阵 loraA, loraB，训练向量 b, d，大幅减少训练参数量</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202405232131931.png"/>
+    </details>
+
+## Weight Decomposed (SVD) / Projection / Transformation
+
+- MoRA: High-Rank Updating for Parameter-Efficient Fine-Tuning
+  - 2024.05.20, arXiv, [pdf](https://arxiv.org/abs/2405.12130), [code](https://github.com/kongds/mora)
+  - <details>
+      <summary>Method: 1. 使用 high-rank 方阵替代 low-rank; 2. 使用非参数压缩&解压缩函数（linear time），包括截断维度、共享行列、重塑输入、旋转算子</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202405241157170.png"/>
+    </details>
+
+- CTRLorALTer: Conditional LoRAdapter for Efficient 0-Shot Control & Altering of T2I Models
+  - 2024.05.13, arXiv, [pdf](https://arxiv.org/abs/2405.07913), [code](https://github.com/CompVis/LoRAdapter), [home](https://compvis.github.io/LoRAdapter/)
+  - Method: 对 LoRA_A 进行 conditional transformation, 控制 stabe diffusion structure&style
+
+- PiSSA: Principal Singular Values and Singular Vectors Adaptation of Large Language Models
+  - 2024.04.03, arXiv, [pdf](https://arxiv.org/abs/2404.02948)
+  - Method: SVD init LoRA, large singular part freeze, small singular part update
+
+- SVD-LLM: Truncation-aware Singular Value Decomposition for Large Language Model Compression
+  - 2024.03.12, arXiv, [pdf](https://arxiv.org/abs/2403.07378)
+
 - Matrix-Transformation Based Low-Rank Adaptation (MTLoRA): A Brain-Inspired Method for Parameter-Efficient Fine-Tuning
   - 2024.03.12, arXiv, [pdf](https://arxiv.org/abs/2403.07440)
   - 特定任务的参数矩阵进行线性变换，以动态改变参数矩阵的空间几何结构，并生成新的矩阵特征模式（特征向量）
-
-- GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection
-  - 2024.03.06, arXiv, [pdf](https://arxiv.org/abs/2403.03507)
-  - Findings: 对梯度进行 low-rank projection，从而降低全量 finetune 参数量
 
 - DoRA: Weight-Decomposed Low-Rank Adaptation
   - 2024.02.14, arXiv, [pdf](https://arxiv.org/abs/2402.09353)
@@ -72,6 +86,8 @@
   - 2024.01.08, arXiv, [pdf](https://arxiv.org/abs/2401.04044)
   - Findings: 把FFN分解成两个FFN来降低运算量
 
+- ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models
+  - 2023.12.10, arXiv, [pdf](https://arxiv.org/abs/2312.05821)
 
 ## Activate Layer / Sensitive Neurons
 
@@ -89,6 +105,12 @@
   - Findings: 70% are never activated in the first half of OPT-60B
 
 
+## Understanding
+
+- LoRA Learns Less and Forgets Less
+  - 2024.05.15, arXiv, [pdf](https://arxiv.org/abs/2405.09673)
+  - Findings: 1. LoRA 相比 FT 学的少也忘的少；2. FT 并没有学到很低的 low rank（但浅层与深层rank更低）；3. LoRA 学习率更大更敏感
+
 ## Others
 
 - LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report
@@ -99,14 +121,15 @@
   - 2024.03.22, arXiv, [pdf](https://arxiv.org/abs/2403.14958)
   - Method: 采用随机低秩(自适应秩)矩阵近似来更有效和准确地近似Adam的二阶矩
 
+- GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection
+  - 2024.03.06, arXiv, [pdf](https://arxiv.org/abs/2403.03507)
+  - Findings: 对梯度进行 low-rank projection，从而降低全量 finetune 参数量
+
 - ResLoRA: Identity Residual Mapping in Low-Rank Adaption
   - 2024.02.28, arXiv, [pdf](https://arxiv.org/abs/2402.18039)
 
 - LoRA Meets Dropout under a Unified Framework
   - 2024.02.25, arXiv, [pdf](https://arxiv.org/abs/2403.00812)
-
-- PRoLoRA: Partial Rotation Empowers More Parameter-Efficient LoRA
-  - 2024.02.24, arXiv, [pdf](https://arxiv.org/abs/2402.16902)
 
 - LoRA+: Efficient Low Rank Adaptation of Large Models
   - 2024.02.19, arXiv, [pdf](https://arxiv.org/abs/2402.12354)
@@ -114,4 +137,5 @@
 
 - ReLoRA: High-Rank Training Through Low-Rank Updates
   - 2023.07.11, arXiv, [pdf](https://arxiv.org/abs/2307.05695)
+  - Method: 在 LoRA 基础上，固定周期将 loraA, loraB 吸收回 W，并重新初始化 loraA, loraB；以增加最终 deltaW 的 rank
 

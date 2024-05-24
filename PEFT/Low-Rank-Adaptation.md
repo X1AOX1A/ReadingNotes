@@ -77,7 +77,10 @@
 
 - Matrix-Transformation Based Low-Rank Adaptation (MTLoRA): A Brain-Inspired Method for Parameter-Efficient Fine-Tuning
   - 2024.03.12, arXiv, [pdf](https://arxiv.org/abs/2403.07440)
-  - 特定任务的参数矩阵进行线性变换，以动态改变参数矩阵的空间几何结构，并生成新的矩阵特征模式（特征向量）
+  - <details>
+      <summary>Method: 对特定任务的参数矩阵进行线性变换，以动态改变参数矩阵的空间几何结构，并生成新的矩阵特征模式（特征向量）</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202405241159207.png"/>
+    </details>
 
 - DoRA: Weight-Decomposed Low-Rank Adaptation
   - 2024.02.14, arXiv, [pdf](https://arxiv.org/abs/2402.09353)

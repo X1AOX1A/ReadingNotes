@@ -3,6 +3,13 @@
 
 ## Adaptive LoRA
 
+- DoRA: Enhancing Parameter-Efficient Fine-Tuning with Dynamic Rank Distribution
+  - 2024.05.27， arXiv, [pdf](https://arxiv.org/abs/2405.17357), [code](https://github.com/mikumikumi0116/dora)
+  - <details>
+      <summary>Method: 将高秩LoRA分解为多个单秩LoRA组合，允许更细粒度的参数管理</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406071026812.png"/>
+    </details>
+
 - LISA: Layerwise Importance Sampling for Memory-Efficient Large Language Model Fine-Tuning
   - 2024.03.26, arXiv, [pdf](https://arxiv.org/abs/2403.17919)
   - Motivation：在LoRA中，底层 （embedding, e.g. LLaMA2-7B, GPT2）和/或顶层 (lm head, e.g. GPT2) 占据了大多数权重更新，而其他自注意力层只占很小一部分。这表明不同层次在更新时的重要性不同
@@ -30,6 +37,13 @@
 
 ## Sparse LoRA
 
+- Sparse Matrix in Large Language Model Fine-tuning
+  - 2024.05.24, arXiv, [pdf](https://arxiv.org/abs/2405.15525)
+  - <details>
+      <summary>Method: 直接对原参数矩阵中少量参数进行微调；V 比 QK更重要</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406071019833.png"/>
+    </details>
+
 - FourierFT: Parameter-Efficient Fine-Tuning with Discrete Fourier Transform
   - 2024.05.05, ICML2024, [pdf](https://arxiv.org/abs/2405.03003), [code](https://github.com/Chaos96/fourierft)
   - <details>
@@ -56,6 +70,27 @@
     </details>
 
 ## Weight Decomposed (SVD) / Projection / Transformation
+
+- SVFT: Parameter-Efficient Fine-Tuning with Singular Vectors
+  - 2024.05.30, arXiv, [pdf](https://arxiv.org/abs/2405.19597), [code](https://github.com/vijaylingam95/svft)
+  - <details>
+      <summary>Method: 只微调 SVD 对角矩阵</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406071028939.png"/>
+    </details>
+
+- LoRA-XS: Low-Rank Adaptation with Extremely Small Number of Parameters
+  - 2024.05.27, arXiv, [pdf](https://arxiv.org/abs/2405.17604), [code](https://github.com/MohammadrezaBanaei/LoRA-XS)
+  - <details>
+      <summary>Method: 只微调 SVD 对角矩阵</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406071027436.png"/>
+    </details>
+
+- VB-LoRA: Extreme Parameter Efficient Fine-Tuning with Vector Banks
+  - 2024.05.24, arXiv, [pdf](https://arxiv.org/abs/2405.15179)
+  - <details>
+      <summary>Method: 使用 vector bank 替代 loraA, loraB 进行参数选择与共享</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406071023133.png"/>
+    </details>
 
 - MoRA: High-Rank Updating for Parameter-Efficient Fine-Tuning
   - 2024.05.20, arXiv, [pdf](https://arxiv.org/abs/2405.12130), [code](https://github.com/kongds/mora)
@@ -107,6 +142,73 @@
   - 2023.09.09, arXiv, [pdf](https://arxiv.org/abs/2309.04827)
   - Findings: 70% are never activated in the first half of OPT-60B
 
+## LoRA-MoE
+
+- AdaMoLE: Fine-Tuning Large Language Models with Adaptive Mixture of Low-Rank Adaptation Experts
+  - 2024.05.01, arXiv, [pdf](https://arxiv.org/abs/2405.00361)
+  - <details>
+        <summary>Method: 使用 gating function 和 threshold function 动态选取 lora expert topK 个数；LLaMA-2-7B 超越 MoLE</summary>
+        <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/SnippetsLab/202405151325246.png"/>
+        </details>
+
+- HydraLoRA: An Asymmetric LoRA Architecture for Efficient Fine-Tuning
+  - 2024.04.30, arXiv, [pdf](https://arxiv.org/abs/2404.19245)
+  - Motivation: 使用 t-sne 发现在不同子任务上 lora-A 偏向于学习共性知识，而 lora-B 偏向于学习特定知识
+  - Method：使用 K-Means 自动决定 lora-B 数量，并共享 lora-A，加入类似 MoE 的可学习 router
+
+- Snowflake Arctic: The Best LLM for Enterprise AI — Efficiently Intelligent, Truly Open
+  - 2024.04.24, [Blog](https://www.snowflake.com/blog/arctic-open-efficient-foundation-language-models-snowflake/)
+  - <details>
+        <summary>Method: Dense+MoE</summary>
+        <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/SnippetsLab/202405151327490.png"/>
+        </details>
+
+- MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA based Mixture of Experts
+  - 2024.04.22, arXiv, [pdf](https://arxiv.org/abs/2404.15159)
+  - <details>
+        <summary>Method: Add LoRA to MoE FFN</summary>
+        <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/SnippetsLab/202405151328719.png"/>
+        </details>
+
+- Mixture-of-LoRAs: An Efficient Multitask Tuning for Large Language Models
+  - 2024.03.06, arXiv, [pdf](https://arxiv.org/abs/2403.03432)
+
+- Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models
+  - 2024.02.22, arXiv, [pdf](https://arxiv.org/abs/2402.14800)
+
+- MoELoRA: Contrastive Learning Guided Mixture of Experts on Parameter-Efficient Fine-Tuning for Large Language Models
+  - 2024.02.20, arXiv, [pdf](https://arxiv.org/abs/2402.12851)
+
+- MoLA: Higher Layers Need More LoRA Experts
+  - 2024.02.13, arXiv, [pdf](https://arxiv.org/abs/2402.08562), [code](https://github.com/gcyzsl/mola)
+  - Findings: LLaMA2-7B (QKVUpDownGate) 上六个数据集均是深层次增加更多 LoRA Experts 更好
+
+- MoLE: Mixture of LoRA Experts
+  - 2024.01.16, arXiv, [pdf](https://openreview.net/forum?id=uWvKBCYh4S)
+  - <details>
+        <summary>Method: Add MoE-LoRA to Dense Model；代码参考 AdaMoLE</summary>
+        <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/SnippetsLab/202405151330923.png"/>
+        </details>
+
+- LoRAMoE: Alleviate World Knowledge Forgetting in Large Language Models via MoE-Style Plugin
+  - 2023.12.15, arXiv, [pdf](https://arxiv.org/abs/2312.09979)
+
+## LoRA Composition / Fusion
+
+- Towards Modular LLMs by Building and Reusing a Library of LoRAs
+  - 2024.05.18, arXiv, [pdf](https://arxiv.org/abs/2405.11157)
+  - <details>
+      <summary>Method: 使用 SVD 集成 LoRA</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406071017867.png"/>
+    </details>
+
+- LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report
+  - 2024.04.29, arXiv, [pdf](https://arxiv.org/abs/2405.00732), [code](https://github.com/predibase/lora_bakeoff?tab=readme-ov-file)
+  - TL;DR: 25 fine-tuned Mistral-7b models that consistently outperform base models by 70% and GPT-4 by 4-15%
+
+- LoraHub: Efficient Cross-Task Generalization via Dynamic LoRA Composition
+  - 2024.01.18, arXiv, [pdf](https://arxiv.org/abs/2307.13269)
+
 
 ## Understanding
 
@@ -114,11 +216,8 @@
   - 2024.05.15, arXiv, [pdf](https://arxiv.org/abs/2405.09673)
   - Findings: 1. LoRA 相比 FT 学的少也忘的少；2. FT 并没有学到很低的 low rank（但浅层与深层rank更低）；3. LoRA 学习率更大更敏感
 
-## Others
 
-- LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report
-  - 2024.04.29, arXiv, [pdf](https://arxiv.org/abs/2405.00732), [code](https://github.com/predibase/lora_bakeoff?tab=readme-ov-file)
-  - TL;DR: 25 fine-tuned Mistral-7b models that consistently outperform base models by 70% and GPT-4 by 4-15%
+## Others
 
 - Adapprox: Adaptive Approximation in Adam Optimization via Randomized Low-Rank Matrices
   - 2024.03.22, arXiv, [pdf](https://arxiv.org/abs/2403.14958)

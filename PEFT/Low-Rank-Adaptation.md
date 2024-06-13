@@ -216,6 +216,10 @@
   - 2024.05.15, arXiv, [pdf](https://arxiv.org/abs/2405.09673)
   - Findings: 1. LoRA 相比 FT 学的少也忘的少；2. FT 并没有学到很低的 low rank（但浅层与深层rank更低）；3. LoRA 学习率更大更敏感
 
+- The Impact of Initialization on LoRA Finetuning Dynamics
+  - 2024.06.12, arXiv, [pdf](https://arxiv.org/abs/2406.08447)
+  - Findings: Initializing B to zero and A to random on average yields better performance compared to the counterpart.
+
 
 ## Others
 

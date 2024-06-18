@@ -63,3 +63,26 @@
 ## Tricks
 
 - [超大模型加载转换Trick](https://zhuanlan.zhihu.com/p/698950172) (2024.05.21)
+
+## Links
+
+Personal Blogs:
+- [Yao Fu's Blog](https://www.notion.so/yaofu/Yao-Fu-s-Blog-b536c3d6912149a395931f1e871370db?pvs=4)
+- [Lilian Weng's Blog](https://lilianweng.github.io)
+- [Sebastian Ruder's Blog](https://www.ruder.io)
+- [Jay Alammar's Blog](https://jalammar.github.io): Illustration of Models
+- [Chris McCormick's Blog](https://mccormickml.com): Explanation of Models
+- [Yann LeCun's Blog](http://yann.lecun.com/ex/index.html)
+- [Andrej Karpathy's Blog](http://karpathy.github.io)
+- [Eugene Yan's Blog](https://eugeneyan.com/writing/)
+- [Chip Huyen's Blog](https://huyenchip.com/blog/)
+- [pacman100's Blog](https://github.com/pacman100#%EF%B8%8F-blog-posts-)
+
+Company Blogs:
+- [HuggingFace Blog](https://huggingface.co/blog?p=1)
+- [OpenAI Blog](https://openai.com/blog)
+- [DeepMind Blog](https://deepmind.com/blog)
+- [Google AI Blog](https://ai.googleblog.com)
+- [Facebook AI Blog](https://ai.facebook.com/blog)
+- [Microsoft AI Blog](https://blogs.microsoft.com/ai)
+- [Apple Machine Learning Blog](https://machinelearning.apple.com)

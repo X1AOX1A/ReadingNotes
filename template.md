@@ -10,3 +10,8 @@
       <summary>Method: intro to the method with image</summary>
       <img src="" align="middle" />
     </details>
+  - <details>
+      <summary>summary</summary>
+      1. xxx<br>
+      2. xxx<br>
+    </details>

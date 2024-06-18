@@ -10,4 +10,4 @@
     - [Low-Rank-Adaptation](./PEFT/Low-Rank-Adaptation.md)
     - [Parameter-Efficient-Finetune](./PEFT/Parameter-Efficient-Finetune.md)
 - [Others](./Others)
-    - [Implementation](./Others/Implementation.md)
+    - [Blogs](./Others/Blogs.md)

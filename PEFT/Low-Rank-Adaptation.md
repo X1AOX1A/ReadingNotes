@@ -71,6 +71,19 @@
 
 ## Weight Decomposed (SVD) / Projection / Transformation
 
+- LaMDA: Large Model Fine-Tuning via Spectrally Decomposed Low-Dimensional Adaptation
+  - 2024.06.18, arXiv, [pdf](https://arxiv.org/abs/2406.12832), [code](https://github.com/arminazizi98/lamda)
+  - <details>
+      <summary>Method: SVD init + 只微调单位矩阵</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406191450549.png"/>
+    </details>
+
+- MiLoRA: Harnessing Minor Singular Components for Parameter-Efficient LLM Finetuning
+  - 2024.06.13， arXiv, [pdf](https://arxiv.org/abs/2406.09044)
+  - <details>
+      <summary>Method: 使用 SVD 初始化，只微调小部分 singular components</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406191454925.png"/>
+    </details>
 - SVFT: Parameter-Efficient Fine-Tuning with Singular Vectors
   - 2024.05.30, arXiv, [pdf](https://arxiv.org/abs/2405.19597), [code](https://github.com/vijaylingam95/svft)
   - <details>

@@ -57,11 +57,13 @@
 
 ## Model Explanation
 
+- [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html) by Harvard NLP (2018.04.03) ([Code](https://github.com/harvardnlp/annotated-transformer/blob/master/AnnotatedTransformer.ipynb)) ([Updated version](http://nlp.seas.harvard.edu/annotated-transformer/))
 - [Mixture of Experts Explained](https://huggingface.co/blog/moe) (2023.12.11)
 - [从零实现一个MOE（专家混合模型）](https://zhuanlan.zhihu.com/p/701777558) (2024.06.05)
 
 ## Tricks
 
+- [llm-action](https://github.com/liguodongiot/llm-action): 大模型相关技术原理以及实战经验
 - [超大模型加载转换Trick](https://zhuanlan.zhihu.com/p/698950172) (2024.05.21)
 
 ## Links
@@ -71,7 +73,6 @@ Personal Blogs:
 - [Lilian Weng's Blog](https://lilianweng.github.io)
 - [Sebastian Ruder's Blog](https://www.ruder.io)
 - [Jay Alammar's Blog](https://jalammar.github.io): Illustration of Models
-- [Chris McCormick's Blog](https://mccormickml.com): Explanation of Models
 - [Yann LeCun's Blog](http://yann.lecun.com/ex/index.html)
 - [Andrej Karpathy's Blog](http://karpathy.github.io)
 - [Eugene Yan's Blog](https://eugeneyan.com/writing/)

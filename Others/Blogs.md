@@ -64,6 +64,7 @@
 ## Tricks
 
 - [llm-action](https://github.com/liguodongiot/llm-action): 大模型相关技术原理以及实战经验
+- [llm-resource](https://github.com/liguodongiot/llm-resource): LLM全栈优质资源汇总
 - [超大模型加载转换Trick](https://zhuanlan.zhihu.com/p/698950172) (2024.05.21)
 
 ## Links

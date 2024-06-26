@@ -53,6 +53,13 @@
 - [分析transformer模型的参数量、计算量、中间激活、KV cache](https://zhuanlan.zhihu.com/p/624740065) (2024.01.01)
 - [浅谈后向传递的计算量大约是前向传递的两倍](https://zhuanlan.zhihu.com/p/675517271)(2024.01.01)
 
+## Evaluation
+
+- [LLM Benchmarks: MMLU, HellaSwag, BBH, and Beyond](https://www.confident-ai.com/blog/llm-benchmarks-mmlu-hellaswag-and-beyond) (2024.03.16)
+    - <details>
+        <summary>A comparision of different LLM benchmarks</summary>
+        <img src="https://cdn.prod.website-files.com/64bd90bdba579d6cce245aec/65f9717426dad046975c2dba_benchmarks.png" align="middle" />
+        </details>
 
 
 ## Model Explanation

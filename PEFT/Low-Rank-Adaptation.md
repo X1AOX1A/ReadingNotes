@@ -4,7 +4,7 @@
 ## Adaptive LoRA
 
 - DoRA: Enhancing Parameter-Efficient Fine-Tuning with Dynamic Rank Distribution
-  - 2024.05.27， arXiv, [pdf](https://arxiv.org/abs/2405.17357), [code](https://github.com/mikumikumi0116/dora)
+  - 2024.05.27, arXiv, [pdf](https://arxiv.org/abs/2405.17357), [code](https://github.com/mikumikumi0116/dora)
   - <details>
       <summary>Method: 将高秩LoRA分解为多个单秩LoRA组合，允许更细粒度的参数管理</summary>
       <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202406071026812.png"/>

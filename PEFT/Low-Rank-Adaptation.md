@@ -71,6 +71,20 @@
 
 ## Weight Decomposed (SVD) / Projection / Transformation
 
+- LoRA-GA: Low-Rank Adaptation with Gradient Approximation
+  - 2024.07.12, arXiv, [pdf](https://arxiv.org/abs/2407.05000), [code](https://github.com/Outsider565/LoRA-GA)
+  - <details>
+      <summary>Method: 基于首次梯度的 SVD 分解对 loraA, loraB 进行初始化</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202407121358871.png"/>
+    </details>
+
+- FLoRA: Low-Rank Core Space for N-dimension
+  - 2024.05.23, arXiv, [pdf](https://arxiv.org/abs/2405.14739), [code](https://github.com/SJTU-DeepVisionLab/FLoRA)
+  - <details>
+      <summary>Method: Tucker 分解</summary>
+      <img src="https://picx.zhimg.com/70/v2-4122388a7a0d9d410843c8ad83cfe8b0_1440w.awebp?source=172ae18b&biz_tag=Post"/>
+    </details>
+
 - LaMDA: Large Model Fine-Tuning via Spectrally Decomposed Low-Dimensional Adaptation
   - 2024.06.18, arXiv, [pdf](https://arxiv.org/abs/2406.12832), [code](https://github.com/arminazizi98/lamda)
   - <details>

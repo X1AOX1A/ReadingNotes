@@ -74,13 +74,20 @@
       <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202405232131931.png"/>
     </details>
 
-## Weight Decomposed (SVD) / Projection / Transformation
+## Weight Decomposed / Projection / Transformation
 
 - LoRA-GA: Low-Rank Adaptation with Gradient Approximation
   - 2024.07.12, arXiv, [pdf](https://arxiv.org/abs/2407.05000), [code](https://github.com/Outsider565/LoRA-GA)
   - <details>
       <summary>Method: 基于首次梯度的 SVD 分解对 loraA, loraB 进行初始化</summary>
       <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202407121358871.png"/>
+    </details>
+
+- MoRe Fine-Tuning with 10x Fewer Parameters
+  - 2024.07.03， ICML2024, [pdf](https://openreview.net/forum?id=AzTz27n6O2)
+  - <details>
+      <summary>Method: Monarch Rectangular Fine-tuning</summary>
+      <img src="https://x1a-alioss.oss-cn-shenzhen.aliyuncs.com/imgs/202407241533676.png"/>
     </details>
 
 - FLoRA: Low-Rank Core Space for N-dimension

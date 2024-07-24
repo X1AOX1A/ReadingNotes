@@ -74,6 +74,10 @@
 - [llm-resource](https://github.com/liguodongiot/llm-resource): LLM全栈优质资源汇总
 - [超大模型加载转换Trick](https://zhuanlan.zhihu.com/p/698950172) (2024.05.21)
 
+## Others
+
+- [Monarch矩阵：计算高效的稀疏型矩阵分解](https://kexue.fm/archives/10249) 苏剑林 (2024.07.24)
+
 ## Links
 
 Personal Blogs:

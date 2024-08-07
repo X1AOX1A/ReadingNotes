@@ -68,6 +68,11 @@
         </details>
 
 
+## Hardware
+
+- [万字长文详解InfiniBand](https://mp.weixin.qq.com/s/2gQ1wvDU5wiC5Y93l_Gx1g)
+
+
 ## Model Explanation
 
 - [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html) by Harvard NLP (2018.04.03) ([Code](https://github.com/harvardnlp/annotated-transformer/blob/master/AnnotatedTransformer.ipynb)) ([Updated version](http://nlp.seas.harvard.edu/annotated-transformer/))
@@ -83,6 +88,7 @@
 ## Others
 
 - [Monarch矩阵：计算高效的稀疏型矩阵分解](https://kexue.fm/archives/10249) 苏剑林 (2024.07.24)
+- [一文详解模型权重存储新格式 Safetensors](https://mp.weixin.qq.com/s/JGKJZ7zAYpO8zCU1VptgAA)
 
 ## Links
 

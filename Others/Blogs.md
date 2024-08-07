@@ -53,6 +53,12 @@
 - [分析transformer模型的参数量、计算量、中间激活、KV cache](https://zhuanlan.zhihu.com/p/624740065) (2024.01.01)
 - [浅谈后向传递的计算量大约是前向传递的两倍](https://zhuanlan.zhihu.com/p/675517271)(2024.01.01)
 
+## Inference
+
+- [图解大模型计算加速：vLLM核心技术PagedAttention原理](https://mp.weixin.qq.com/s?__biz=MzU3Mzg5ODgxMg==&mid=2247488465&idx=2&sn=d9422378c06d0cd151119e21eaf3886f&chksm=fd3bfa82ca4c7394fe6817a6245eae8654e83e0274c659b3786c6090807cc91e47640fdc1221&scene=21#wechat_redirect)
+- [图解大模型计算加速系列：vLLM源码解析1，整体架构](https://mp.weixin.qq.com/s/7vJdWFt9SHP1xh9OuEVDRg)
+
+
 ## Evaluation
 
 - [LLM Benchmarks: MMLU, HellaSwag, BBH, and Beyond](https://www.confident-ai.com/blog/llm-benchmarks-mmlu-hellaswag-and-beyond) (2024.03.16)
